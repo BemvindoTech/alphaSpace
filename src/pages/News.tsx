@@ -1,11 +1,12 @@
+import { CardsGrid } from "@/components"
 import { snapiCustomFetch } from "@/utils/customFetch"
 import type { NewsResponse } from "@/utils/types"
 import { useLoaderData, type LoaderFunction } from "react-router-dom"
 
 const newsParams ={
   news_site_exclude:"SpacePolicyOnline.com",
-  limit:20,
-  ordering: "published_at"
+  limit:30,
+  ordering: "-updated_at"
 }
 
 export const newPageLoader : LoaderFunction = async(): Promise<NewsResponse | null> => {
@@ -29,6 +30,8 @@ export const News = () => {
   console.log(results);
   
   return (
-    <div>News</div>
+    <section className="section">
+      <CardsGrid objects={results} mode="news-page" />
+    </section>
   )
 }

@@ -1,6 +1,6 @@
 @font-face {
   font-family: sf-mono;
-  src: url(./assets/fonts/sf/SFMonoRedular.otf)
+  src: url(./assets/fonts/sf/SFMonoRegular.otf)
 }  
 @font-face {
   font-family: mars;
@@ -9,6 +9,9 @@
 
 body{
   font-family: sf-mono, systeme-ui, -apple-systeme;
+}   
+:root{
+  --clr-violet: #86198f;
 }
 
 @tailwind base;
@@ -71,14 +74,19 @@ body{
   }
 }
 
+
 @layer components{
   .mars-font{
     font-family:mars;
   }
   .test{
     @apply border-solid border-2 border-black
+
   }
   .align-element{
     @apply max-w-6xl mx-auto px-8
+  }
+  .section {
+    @apply  min-h-[100vh] align-element px-0 py-12
   }
 }
