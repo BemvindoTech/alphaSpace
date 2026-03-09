@@ -37,7 +37,7 @@ export type News = {
 } 
 
 
-export type snapiResponse = {
+export type NewsResponse = {
     count: number,
     next: string,
     previous: string,

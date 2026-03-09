@@ -3,7 +3,7 @@ export type Link ={
     label: string;
 };
 
-export const links : Link[] = [
+    export const links : Link[] = [
     {ref: '/', label: "home"},
     {ref: '/spacex', label: "spaceX"},
     {ref: '/webb', label: "james webb"},
