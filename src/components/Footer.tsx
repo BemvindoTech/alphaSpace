@@ -4,7 +4,7 @@ export const Footer = (): ReactNode => {
   return (
     <footer className="bg-black text-white">
       <div className="align-element min-h-[15vh] flex flex-col justify-center items-center ">
-        <p className="my-2">-2026-</p>
+        <p className="my-2">- 2026 -</p>
         <p className="mars-font text-2xl my-4 text-center">alphaSpace. by BemvindoTech</p>
         <p className="underline">ressources:</p>
         <p className="text-center">
