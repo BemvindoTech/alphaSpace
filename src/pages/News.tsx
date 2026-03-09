@@ -1,6 +1,6 @@
 import { snapiCustomFetch } from "@/utils/customFetch"
 import type { NewsResponse } from "@/utils/types"
-import type { LoaderFunction } from "react-router-dom"
+import { useLoaderData, type LoaderFunction } from "react-router-dom"
 
 const newsParams ={
   news_site_exclude:"SpacePolicyOnline.com",
@@ -24,6 +24,10 @@ export const newPageLoader : LoaderFunction = async(): Promise<NewsResponse | nu
 }
 
 export const News = () => {
+
+  const {results} = useLoaderData() as NewsResponse
+  console.log(results);
+  
   return (
     <div>News</div>
   )
